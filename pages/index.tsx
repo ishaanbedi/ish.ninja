@@ -173,7 +173,7 @@ const Home: React.FC = () => {
               Your login credentials are used to verify your identity directly with BlueSky.
             </p>
             <p className="lg:md:sm:block hidden text-xs text-center text-gray-500">
-              All the tokens and profile data will never be stored on our database.
+              Any of your confidential information is not stored on our database.
             </p>
             <p className="mt-6 text-xs text-center text-gray-500">
               By <Link href="https://staging.bsky.app/profile/ishaanbedi.in" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-500">@ishaanbedi.in</Link> | {" "}
