@@ -73,6 +73,22 @@ const Home: React.FC = () => {
     <main className="min-h-screen bg-gray-100">
       <Head>
         <title>{process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <meta property="og:title" content={process.env.NEXT_PUBLIC_APP_NAME} />
+        <meta property="og:description" content="Free .ish.ninja sub-handle for your BlueSky account!" />
+        <meta property="og:image" content="https://ish.ninja/og.jpg" />
+        <meta property="og:url" content="https://ish.ninja" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ishnbedi" />
+        <meta name="twitter:creator" content="@ishnbeid" />
+        <meta name="twitter:title" content={process.env.NEXT_PUBLIC_APP_NAME} />
+        <meta name="twitter:description" content="Free .ish.ninja sub-handle for your BlueSky account!" />
+        <meta name="twitter:image" content="https://ish.ninja/og.jpg" />
+
+        <meta name="description" content="Free .ish.ninja sub-handle for your BlueSky account!" />
+        <meta name="keywords" content="bluesky, handle, sub-handle, blueskyhandle, bluesky handle" />
+        <meta name="author" content="Ishaan Bedi" />
+        <meta name="robots" content="index, follow" />
       </Head>
 
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
