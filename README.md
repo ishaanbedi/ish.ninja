@@ -1,5 +1,5 @@
 # ish.ninja
-`ish.ninja` is a free online patform to allocate a unique `ish.ninja` sub handle name for a BlueSky account.
+`ish.ninja` is a free online platform to allocate a unique `ish.ninja` sub handle name for a BlueSky account.
 
 It is built using Next.js, Xata, The AT Protocol & Vercel API.
 
