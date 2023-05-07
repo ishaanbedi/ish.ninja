@@ -98,7 +98,7 @@ const Home: React.FC = () => {
           </h1>
 
           <p className="mx-auto mt-4 mb-1 lg:md:sm:text-md text-sm max-w-lg text-center text-gray-500">
-            Free .{process.env.NEXT_PUBLIC_APP_NAME} sub-handle for your Bluesky account!
+            Free .{process.env.NEXT_PUBLIC_APP_NAME} sub-handle for your BlueSky account!
           </p>
 
           <form
@@ -179,6 +179,10 @@ const Home: React.FC = () => {
               By <Link href="https://staging.bsky.app/profile/ishaanbedi.in" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-500">@ishaanbedi.in</Link> | {" "}
               <Link href="https://ishaanbedi.in" target="_blank" rel="noopener noreferrer" className="mt-6 text-xs text-center text-teal-600 hover:text-teal-500">
                 ishaanbedi.in
+              </Link>
+              <br/>
+              <Link href="https://ishn.xyz/ish_ninja" target="_blank" rel="noopener noreferrer" className="mt-6 text-xs text-center text-teal-600 hover:text-teal-500">
+                Source Code on GitHub
               </Link>
             </p>
           </form>
