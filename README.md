@@ -1,13 +1,12 @@
 # ish.ninja
 `ish.ninja` is a free online patform to allocate a unique `ish.ninja` sub handle name for a BlueSky account.
 
-It is built using Next.js, Xata, and The AT Protocol & Vercel API.
+It is built using Next.js, Xata, The AT Protocol & Vercel API.
 
-It serves as a solid example of how to serve sub-domain as handle names for BlueSky accounts. This is beneficial for verification purpose for users in an organization, community, or a project have a single parent domain and want to have sub-domains for each user.
+It serves as a solid example of how to serve sub-domain as handle names for BlueSky accounts. This is beneficial for verification purpose for users in an organization, community, or a project that have a single parent domain and want to have sub-domains for each user.
 
 This project uses the `ish.ninja` domain to allocate sub handle names for BlueSky accounts. 
 
-You can clone it and deploy it on your own domain to allocate sub handle names for your own domain.
 
 ### How it works?
 
@@ -15,10 +14,11 @@ You can clone it and deploy it on your own domain to allocate sub handle names f
 2. If user is already using a `ish.ninja` subhandle, then they can see their sub handle name and update it if they want.
 3. If user is not using `ish.ninja` then they can allocate a sub handle name for their BlueSky account, given that the sub handle name is not already taken.
 
+You can clone it and deploy it on your own domain to allocate sub handle names for your own domain.
 
 #### Things to keep in mind when deploying this project on your own domain:
-- Create a new xata database using the [xata-cli](https://xata.io/docs/cli/installation) or from the [xata dashboard](https://app.xata.io/workspaces). Create a new table named `usernames`, with three columns id (default), username(string), and did(string). 
-- For saving all the information related to the domain, I've used Vercel as the Vercel API to play with the DNS records is super simple. Check out [it here](https://vercel.com/docs/rest-api/endpoints#dns)
+- Create a new xata database using the [xata-cli](https://xata.io/docs/getting-started/cli#branches) or from the [xata dashboard](https://app.xata.io/workspaces). Create a new table named `usernames`, with three columns id (default), username(string), and did(string). 
+- For saving all the information related to the domain, I've used Vercel, as the Vercel API endpoints to play with the DNS records are easy to implement. Check the docs [here](https://vercel.com/docs/rest-api/endpoints#dns)
 - The documentation for AT Protocol can be found [here](https://atproto.com/docs/). 
 
 ### How your data is treated?
