@@ -120,15 +120,19 @@ function Profile() {
         console.log('ere')
     };
 
-    useEffect(() => {
-        fetchProfile();
-    }, []);
     const router = useRouter();
     useEffect(() => {
         if (!cookies.accessJWT) {
             router.push('/');
         }
-    }, []);
+    }, [
+        cookies.accessJWT,
+        cookies.did,
+        cookies.refreshJWT,
+        cookies.handle,
+        cookies.server,
+        router
+    ]);
     const updateUserName = async () => {
         setLoading(true);
         const notify = () => toast.loading('Updating username...');
@@ -201,6 +205,9 @@ function Profile() {
         setCookie('server', '', { path: '/' });
         router.push('/');
     }
+    useEffect(() => {
+        fetchProfile();
+    });
     return (
         <>
             {profile && (
@@ -285,7 +292,7 @@ function Profile() {
                                     <br />
                                     Also, for DNS propagation, we will store your did in our database to uniquely identify you. We will not store any other information about you.
                                     <br />
-                                    If your current handle is a default handle provided by BlueSky, it'll be immediately released and anyone on the network can claim it.
+                                    If your current handle is a default handle provided by BlueSky, it&apos;ll be immediately released and anyone on the network can claim it.
                                 </p>
                             </div>
                         </div>

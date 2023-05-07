@@ -65,7 +65,7 @@ const Home: React.FC = () => {
     if (cookies?.accessJWT) {
       router.push('/profile');
     }
-  }, [cookies]);
+  }, [cookies, router]);
 
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -158,4 +158,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default React.memo(Home);
+export default Home;
