@@ -57,11 +57,11 @@ function Profile() {
                 const jwt = cookies.accessJWT
                 try {
                     await new Promise(resolve => setTimeout(resolve, 5000));
-                    await axios.post('https://bsky.social/xrpc/com.atproto.identity.updateHandle', {
+                    await axios.post(`https://${cookies.server}/xrpc/com.atproto.identity.updateHandle`, {
                         handle: `${handle}.${process.env.NEXT_PUBLIC_APP_NAME}`
                     }, {
                         headers: {
-                            'authority': 'bsky.social',
+                            'authority': cookies.server,
                             'accept': '*/*',
                             'accept-language': 'en-US,en;q=0.9',
                             'authorization': `Bearer ${jwt}`,
@@ -70,11 +70,11 @@ function Profile() {
                     })
                 } catch (error) {
                     await new Promise(resolve => setTimeout(resolve, 5000));
-                    await axios.post('https://bsky.social/xrpc/com.atproto.identity.updateHandle', {
+                    await axios.post(`https://${cookies.server}/xrpc/com.atproto.identity.updateHandle`, {
                         handle: `${handle}.${process.env.NEXT_PUBLIC_APP_NAME}`
                     }, {
                         headers: {
-                            'authority': 'bsky.social',
+                            'authority': cookies.server,
                             'accept': '*/*',
                             'accept-language': 'en-US,en;q=0.9',
                             'authorization': `Bearer ${jwt}`,
@@ -98,7 +98,7 @@ function Profile() {
     const fetchProfile = async () => {
         try {
             const { data } = await axios.get<ProfileData>(
-                `https://bsky.social/xrpc/app.bsky.actor.getProfile?actor=${cookies.did}`,
+                `https://${cookies.server}/xrpc/app.bsky.actor.getProfile?actor=${cookies.did}`,
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -152,11 +152,11 @@ function Profile() {
                 const handle = newHandle
                 try {
                     await new Promise(resolve => setTimeout(resolve, 5000));
-                    await axios.post('https://bsky.social/xrpc/com.atproto.identity.updateHandle', {
+                    await axios.post(`https://${cookies.server}/xrpc/com.atproto.identity.updateHandle`, {
                         handle: `${handle}.${process.env.NEXT_PUBLIC_APP_NAME}`
                     }, {
                         headers: {
-                            'authority': 'bsky.social',
+                            'authority': cookies.server,
                             'accept': '*/*',
                             'accept-language': 'en-US,en;q=0.9',
                             'authorization': `Bearer ${jwt}`,
@@ -166,11 +166,11 @@ function Profile() {
                 } catch (error) {
                     const handle = newHandle
                     await new Promise(resolve => setTimeout(resolve, 5000));
-                    await axios.post('https://bsky.social/xrpc/com.atproto.identity.updateHandle', {
+                    await axios.post(`https://${cookies.server}/xrpc/com.atproto.identity.updateHandle`, {
                         handle: `${handle}.${process.env.NEXT_PUBLIC_APP_NAME}`
                     }, {
                         headers: {
-                            'authority': 'bsky.social',
+                            'authority': cookies.server,
                             'accept': '*/*',
                             'accept-language': 'en-US,en;q=0.9',
                             'authorization': `Bearer ${jwt}`,
