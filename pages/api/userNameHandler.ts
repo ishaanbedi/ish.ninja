@@ -4,7 +4,7 @@ import { getXataClient } from "../../src/xata";
 const xata = getXataClient();
 
 export default async function handler({ query: { username, did } }: any, res: any): Promise<void> {
-  const { APP_SECRET, VERCEL_TOKEN } = process.env;
+  const { APP_SECRET, VER_ACC_TOKEN } = process.env;
   const apiKeyServer = APP_SECRET;
 
   if (!apiKeyServer || !username) {
@@ -35,7 +35,7 @@ export default async function handler({ query: { username, did } }: any, res: an
   }, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${VERCEL_TOKEN}`,
+      Authorization: `Bearer ${VER_ACC_TOKEN}`,
     },
   });
 

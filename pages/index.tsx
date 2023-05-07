@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
 import Link from 'next/link';
+import Head from 'next/head';
 
 interface CreateSessionResponse {
   accessJwt?: string;
@@ -70,6 +71,9 @@ const Home: React.FC = () => {
 
   return (
     <main className="min-h-screen bg-gray-100">
+      <Head>
+        <title>{process.env.NEXT_PUBLIC_APP_NAME}</title>
+      </Head>
 
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg">

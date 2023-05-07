@@ -4,7 +4,7 @@ import { getXataClient } from "../../src/xata";
 const xata = getXataClient();
 
 export default async function handler({ query: { username, did, oldusername } }: any, res: any): Promise<void> {
-  const { APP_SECRET, VERCEL_TOKEN } = process.env;
+  const { APP_SECRET, VER_ACC_TOKEN } = process.env;
   const apiKeyServer = APP_SECRET;
 
   if (!apiKeyServer || !username || !did) {
@@ -32,7 +32,7 @@ export default async function handler({ query: { username, did, oldusername } }:
 
   const result = await fetch(`https://api.vercel.com/v4/domains/${process.env.NEXT_PUBLIC_APP_NAME}/records`, {
     "headers": {
-      "Authorization": `Bearer ${VERCEL_TOKEN}`
+      "Authorization": `Bearer ${VER_ACC_TOKEN}`
     },
     "method": "get"
   });
@@ -43,7 +43,7 @@ export default async function handler({ query: { username, did, oldusername } }:
   await Promise.all([
     fetch(`https://api.vercel.com/v2/domains/${process.env.NEXT_PUBLIC_APP_NAME}/records/${record_id}`, {
       "headers": {
-        "Authorization": `Bearer ${VERCEL_TOKEN}`
+        "Authorization": `Bearer ${VER_ACC_TOKEN}`
       },
       "method": "delete"
     }),
@@ -54,7 +54,7 @@ export default async function handler({ query: { username, did, oldusername } }:
     }, {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${VERCEL_TOKEN}`,
+        Authorization: `Bearer ${VER_ACC_TOKEN}`,
       },
     })
   ]);

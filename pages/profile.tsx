@@ -4,6 +4,7 @@ import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';
 import { log } from 'console';
+import Head from 'next/head';
 interface ProfileData {
     did: string;
     handle: string;
@@ -210,6 +211,9 @@ function Profile() {
     });
     return (
         <>
+            <Head>
+                <title>Profile | {process.env.NEXT_PUBLIC_APP_NAME}</title>
+            </Head>
             {profile && (
                 <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-6 sm:px-6 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-md">
