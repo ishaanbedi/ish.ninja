@@ -1,3 +1,5 @@
+> Update (05/01/2024): I am archiving this repo as it didn't get the expected utility among users. You can still clone it and customize it with another domain to get the purpose done.
+
 # ish.ninja
 `ish.ninja` is a free online platform to allocate a unique `ish.ninja` sub handle name for a BlueSky account.
 
